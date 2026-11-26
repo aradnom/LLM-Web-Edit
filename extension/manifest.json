@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Web Edit",
+  "version": "0.1.0",
+  "description": "Describe a change to the current page and have a local coding model make it.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "web-edit@local",
+      "strict_min_version": "136.0"
+    }
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "optional_permissions": ["userScripts"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_title": "Web Edit",
+    "default_popup": "popup/popup.html"
+  },
+  "options_ui": {
+    "page": "options/options.html"
+  }
+}

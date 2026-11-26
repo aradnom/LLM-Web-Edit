@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      :root { color-scheme: light dark; }
+      body { padding: 12px; font: 13px/1.4 system-ui, sans-serif; }
+      label { display: block; margin: 10px 0 4px; font-weight: 600; }
+      input { box-sizing: border-box; width: 100%; max-width: 460px; padding: 5px; font: inherit; }
+      .row { margin-top: 12px; display: flex; gap: 8px; align-items: center; }
+      #status.error { color: #c62828; }
+      #status.ok { color: #2e7d32; }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <label for="serverUrl">Server URL</label>
+      <input id="serverUrl" type="url" placeholder="http://127.0.0.1:7411" />
+      <label for="token">Token</label>
+      <input id="token" type="password" autocomplete="off" placeholder="Printed by the server on startup" />
+      <div class="row">
+        <button type="submit">Save and test</button>
+        <span id="status" role="status"></span>
+      </div>
+    </form>
+    <script src="options.js"></script>
+  </body>
+</html>
